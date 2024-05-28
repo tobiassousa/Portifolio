@@ -25,6 +25,57 @@ Jaia Software Em um cenário onde a paisagem urbana se compõe de uma mistura de
 
 </details>
 
+<details>
+<summary><b>AuthController: Controle de Autenticação</b></summary>
+<br>
+<p>O código acima implementa o controlador de autenticação (AuthController), responsável por lidar com as solicitações de autenticação dos usuários. Aqui está uma explicação detalhada do que acontece no código:</p>
+
+```java
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.dataTeam.jaia.jaia.model.AuthRequest;
+import com.dataTeam.jaia.jaia.service.AuthService;
+
+@RestController
+@CrossOrigin
+@RequestMapping("/api/auth")
+public class AuthController {
+
+    private final AuthService authService;
+
+    @Autowired
+    public AuthController(AuthService authService) {
+        this.authService = authService;
+    }
+
+    @PostMapping("/login")
+    public ResponseEntity<String> login(@RequestBody AuthRequest authRequest) {
+        String username = authRequest.getUsername();
+        String password = authRequest.getPassword();
+        String tipoDocumento = authRequest.getTipoDocumento();
+
+        if ("cnpj".equals(tipoDocumento)) {
+            String result = authService.authenticateCliente(username, password);
+            return ResponseEntity.ok(result);
+        } else if ("cpf".equals(tipoDocumento)) {
+            String result = authService.authenticateFuncionario(username, password);
+            return ResponseEntity.ok(result);
+        }
+
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Tipo de documento inválido");
+    }
+}
+```
+<p>O AuthController recebe solicitações POST na rota `/api/auth/login`, onde um objeto `AuthRequest` contendo o nome de usuário, senha e tipo de documento é enviado no corpo da solicitação. Dependendo do tipo de documento (cnpj ou cpf), o método `login()` chama o serviço de autenticação apropriado (`authenticateCliente` ou `authenticateFuncionario`). Se o tipo de documento não for válido, uma resposta de status 400 é retornada.</p>
+</details>
+
 
 ## Tecnologias Utilizadas
 Spring Boot: Framework utilizado para desenvolver o Back-End do software.
