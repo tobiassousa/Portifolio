@@ -106,5 +106,5 @@ Figma: utilizado para o desenvolvimento e prototipação das wireframes.
 ## Meus Projetos
 ## Semestres
 
-- [Semestre 5](./Semestre06/Semestre05.md)
-- [Semestre 6](./Semestre05/Semestre06.md)
+- [Semestre 5](../Semestre06/Semestre05.md)
+- [Semestre 6](../Semestre05/Semestre06.md)
