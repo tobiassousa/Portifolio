@@ -136,7 +136,7 @@ Pyttsx3: Biblioteca do Python para síntese de voz, utilizada para que a assiste
 ## Meus Projetos
 ## Semestres
 
-- [Semestre 2](./Semestre02/Semestre02.md)
+- [Semestre 2](../Semestre02/Semestre02.md)
 - [Semestre 3](./Semestre03/Semestre03.md)
 - [Semestre 4](./Semestre04/Semestre04.md)
 - [Semestre 5](./Semestre06/Semestre05.md)
