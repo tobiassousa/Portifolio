@@ -102,3 +102,9 @@ Figma: utilizado para o desenvolvimento e prototipação das wireframes.
   <p1>Resolução de Problemas: Enfrentei desafios técnicos durante o desenvolvimento do sistema, buscando soluções eficientes e adaptáveis para garantir a qualidade do produto final.</p1>
   <p1>Gerenciamento de Tempo: Aprendi a gerenciar meu tempo de forma eficaz, equilibrando as demandas do projeto com outras responsabilidades e compromissos pessoais.</p1>
 </details>
+
+## Meus Projetos
+## Semestres
+
+- [Semestre 5](./Semestre06/Semestre05.md)
+- [Semestre 6](./Semestre05/Semestre06.md)

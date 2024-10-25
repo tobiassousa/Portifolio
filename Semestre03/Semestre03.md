@@ -89,3 +89,10 @@ Figma: utilizado para o desenvolvimento e prototipação das wireframes.
   <p1>Trabalho em Equipe: A colaboração em projetos acadêmicos evidenciou minha habilidade de trabalhar em equipe, essencial em ambientes profissionais de desenvolvimento de software</p1>
   
 </details>
+
+## Meus Projetos
+## Semestres
+
+- [Semestre 4](./Semestre04/Semestre04.md)
+- [Semestre 5](./Semestre06/Semestre05.md)
+- [Semestre 6](./Semestre05/Semestre06.md)
