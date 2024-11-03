@@ -4,8 +4,13 @@ Trabalho de conclusão de curso na forma de um Portfólio de Aprendizagens, dese
 
 ### Sobre mim
 
-Meu nome é Tobias Fernandes Bezerra Sousa, um entusiasta do mundo da tecnologia em constante evolução. Estou trabalhando duro para ser um bom gerenciador de banco de dados. As minhas habilidades abrangem uma grande variedade de tecnologias fundamentais, e é com grande satisfação que aponto minha proficiência em linguagens e ferramentas fundamentais para construção e sustentabilidade de databases. Com domínio em Mysql e PostgreSQL.
-Minha abordagem persistente na compreensão e resolução de problemas complexos me diferencia, e estou confiante em minha capacidade de contribuir significativamente para qualquer equipe de dados. Meu compromisso contínuo com a aprendizagem assegura que estou sempre atualizada com as mais recentes tendências tecnológicas, e estou ansiosa para moldar um futuro inovador e bem-sucedido na indústria.
+Meu nome é Tobias Fernandes Bezerra Sousa,possuo formação em Banco de Dados pela Faculdade de Tecnologia do Estado de São Paulo (FATEC).
+Minha carreira tem sido marcada por uma paixão em desenvolver e sustentar base de banco de dados. Atualmente, meus objetivos estão focados em ser DBA para promover a criação, a sustentabilidade e a disponibilidade dos dados.
+
+Em relação às minhas habilidades técnicas, destaco meu aprendizado por projetos integradores da faculdade (Fatec Prof° Jessen Vidal), com foco em Inteligência Artificial em Python, Crianção de Dashboard, Tratamento de Dados, trabalhando com clientes reais de empresas parceiras da instituição.
+
+Ao longo da minha trajetória profissional, adquiri experiência em gerenciar MySQL pelo console do Linux, análise e extração de dados, utilização do Power BI.
+Por fim, tenho conhecimento em Python, JavaScript, MySQL, PostgreSQL e Linux.
 
 ## Meus Projetos
 ## Semestres

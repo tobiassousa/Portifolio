@@ -3,10 +3,16 @@
 
 Parceiro: Professor Fatec - Fabiano Sabha
 
-## 💻 Nossa proposta
+<div align="center">
+<img src="https://user-images.githubusercontent.com/102003274/160285282-b3d220d2-bf73-4aba-9c86-74a6a4b640b0.png" width="200px" />
+</div>
 
-Este projeto foi criado com o objetivo de fornecer uma ferramenta eficaz e acessível para auxiliar alunos em seus estudos diários.
-A BETA é uma assistente virtual inteligente, projetada para responder perguntas, fornecer explicações detalhadas, ajudar na organização do tempo de estudo e oferecer recursos educacionais personalizados. Ela utiliza algoritmos de processamento de linguagem natural para entender e responder às necessidades dos alunos de maneira eficiente e intuitiva.
+## 💻 Nossa proposta
+A BETA é uma assistente criada por nós com intenção de oferecer suporte a alunos.
+Possuindo varias funcionalidade como:
+ Pesquisa, Pomodoro, Calendário, Toque, Gravador de voz, Livro, Clima, Calculadora ou lembrete
+
+Para ativar suas funcionalidades é necessario apenas falar a nomenclatura da função. 
 
 ## Lições Aprendidas
 
@@ -14,82 +20,158 @@ A BETA é uma assistente virtual inteligente, projetada para responder perguntas
 <h3>Hard Skills</h3>
 <details>
   <summary><b>Clique para ver a lista de hard skills</b></summary>
-<p1>Desenvolvimento de Software: Fortaleci minhas habilidades em Python criando funcionalidades para a assistente virtual.</p1>
+<p1>Desenvolvimento de Software: Fortaleci minhas habilidades em Python criando a função de pomodoro da qual necessitei aprender a realizar a logica de programação, e também a verificar a aprendizagem da maquina a reconhecer a chamativa para a funcionalidade.</p1>
 
-<p1>Uso de Bibliotecas Python: Integrei e utilizei diversas bibliotecas, como Time, Datetime, Tkinter e Winsound, aprimorando a capacidade da assistente de realizar múltiplas tarefas.</p1>
-
-<p1>Gerenciamento de Projetos: Apliquei a metodologia Scrum para planejamento e execução de sprints, utilizando ferramentas como Trello para gestão de tarefas.</p1>
-
-<p1>Desenvolvimento de Interface: Utilizei Tkinter para criar interfaces gráficas intuitivas.</p1>
-
-<p1>Integração de Sistemas: Desenvolvi habilidades para implementar tarefas como pomodoro que realiza timer com pop-up e também modelo de calcularoda por voz.</p1>
+<p1>Desenvolvimento de Interface: Utilizei Tkinter para criar interfaces gráficas intuitivas, das quais realizam avisos na tela quando começa e acaba o tempo do pomodo.</p1>
 
 </details>
 <h3>Soft Skills</h3>
 <details>
   <summary><b>Clique para ver a lista de soft skills</b></summary>
-<p1>Trabalho em Equipe: A colaboração com a equipe foi fundamental, utilizando Discord para comunicação remota e dividindo responsabilidades de forma eficaz.</p1>
+<p1>Trabalho em Equipe: A colaboração com o time é fundamental para conseguir realizar uma entrega completa. Sendo assim foi utilizado o whatsapp para trocas de mensagens diarias e realizado encontros durantes as aulas.</p1>
 
-<p1>Gestão do Tempo: Planejei e cumpri prazos conforme cronograma de entregas e sprints, demonstrando habilidades sólidas de gestão do tempo.</p1>
-
-<p1>Logica: Desenvolvi habilidades de logica para criação das atividades e agilidade na interpretação da voz.</p1>
+<p1>Gestão do Tempo: Realizei o planejamento dos dias de até a entrega e o tempo gasto da atividade para entregar a tempo.</p1>
 
 </details>
 
 ## Contribuições Individuais
 <details>
-  <summary><b>Reconhecimento de Voz e Execução de Comandos</b></summary>
+  <summary><b>Implementação da funcionalidade de pomodoro.</b></summary>
   <br>
-  <p>O código apresentado é parte do desenvolvimento da assistente virtual BETA, que tem como objetivo realizar o reconhecimento de voz e executar comandos baseados nas entradas de áudio do usuário. Aqui está uma explicação detalhada do funcionamento do código:
+  <p>O código apresentado é parte do desenvolvimento da assistente virtual BETA, que tem como objetivo realizar a funcionalidade do pomodoro, o qual a iniciar começa a contar durante 25 mintuos, após isso realiza a pausa de 5 minutos e volta a contar os 25 minutos:
   </p>
   
 ```python
-import speech_recognition as sr
-import wikipedia
-import pyttsx3
-import time
-from tkinter import messagebox
-import winsound
-from tkinter import *
-from tkcalendar import *
-import datetime as dt
-import pywhatkit
-import sounddevice as sd
-from scipy.io.wavfile import write
-import os
-from reportlab.pdfgen import canvas
-from reportlab.lib.pagesizes import A4
+elif 'pomodoro' in comando:
 
-audio = sr.Recognizer()
-maquina = pyttsx3.init()
-maquina.say('Olá, sou a Bêta. Estou aqui para auxiliar.')
-maquina.runAndWait()
-while True:
-    while True:
-        with sr.Microphone() as ouvindo:
-            print('Ouvindo...')
-            voz = audio.listen(ouvindo)
-            chamado = audio.recognize_google(voz, language='pt-BR')
-            chamado = chamado.lower()
-        if chamado == 'beta':
-            def executa_comando():
-                try:
-                    with sr.Microphone() as source:
-                        print('Ouvindo...')
-                        voz = audio.listen(source)
-                        comando = audio.recognize_google(voz, language='pt-BR')
-                        comando = comando.lower()
-                        if 'beta' in comando:
-                            comando = comando.replace('beta', '')
-                            maquina.say(comando)
-                            maquina.runAndWait()
-                except:
-                    print('Microfone não está conectado')
-                return comando
+            t_now = dt.datetime.now()  # data e hora atual;
+
+            t_pom = 25 * 60  # tempo de duração do fluxo pomodoro 25m;
+
+            t_delta = dt.timedelta(0, t_pom)  # diferença de tempo;
+
+            t_fut = t_now + t_delta  # hora que o pomodoro termina e começa a pausa;
+
+            delta_sec = 5 * 60  # definição de intervalo;
+
+            t_fin = t_now + dt.timedelta(0, t_pom + delta_sec)  # hora que a pausa termina;
+
+            pomodoro = pyttsx3.init()
+
+            pomodoro.say("Pomodóro iniciado " "\n\nAgora é " + t_now.strftime(
+
+                "%H:%M") + " hrs. \n\nTemporizador definido por 25 minutos")
+
+            pomodoro.runAndWait()
+
+            total_pomodoros = 0
+
+            breaks = 0
+
+            # Looping simples dividido em três seções: Hora pomodoro, intervalo e fim do código;
+
+            while True:
+
+                if dt.datetime.now() < t_fut:
+
+                    print('Pomodóro')
+
+                elif t_fut <= dt.datetime.now():
+
+                    if total_pomodoros in range(3, 100, 5):
+
+                        for i in range(1):
+                            winsound.Beep((i + 400), 500)  # Primeiro número é referente ao volume do bip.
+
+                        print('Hora do intervalo! Você tem 25 minutos de descanso.')
+
+                        breaks += 1
+
+                        audio = sr.Recognizer()
+
+                        pomodoro = pyttsx3.init()
+
+                        pomodoro.say('Hora do intervalo!')
+
+                        pomodoro.runAndWait()
+
+                        time.sleep(
+                            5)  # Por conta do delay da fala subtrair do tempo de pausa um tempo,então o que era pra ser 25 min ficou 21 min
+
+                        print("Foi")
+
+                    if breaks == 0:
+
+                        for i in range(2):
+                            winsound.Beep((i + 400), 700)  # Primeiro número é referente ao volume do bip.
+
+                        print('Hora do intervalo!')
+
+                        breaks += 1
+
+                        audio = sr.Recognizer()
+
+                        pomodoro = pyttsx3.init()
+
+                        pomodoro.say('Hora do intervalo! Você tem 5 minutos de descanso.')
+
+                        pomodoro.runAndWait()
+
+                        time.sleep(
+                            5)  # Por conta do delay da fala subtrair do tempo de pausa um tempo,então o que era pra ser 5 min ficou o tempo determinado como 1260 dividido por 5, pra ficar um descanso proporcional.
+
+                    else:
+
+                        print('Fim')
+
+                        breaks = 0
+
+                        for i in range(1):
+                            winsound.Beep((i + 400), 700)  # Primeiro número é referente ao volume do bip.
+
+                            audio = sr.Recognizer()
+
+                            pomodoro = pyttsx3.init()
+
+                            pomodoro.say('O intervalo acabou, deseja iniciar um novo pomodóro?')
+
+                            pomodoro.runAndWait()
+
+                        usr_ans = messagebox.askyesno("Fim da primeira sequência do pomodóro",
+
+                                                      "Deseja iniciar outra sequência de pomodóro?")
+
+                        total_pomodoros += 1
+
+                        print(total_pomodoros)
+
+                        if usr_ans == True:
+
+                            t_now = dt.datetime.now()
+
+                            t_fut = t_now + dt.timedelta(0, t_pom)
+
+                            t_fin = t_now + dt.timedelta(0, t_pom + delta_sec)
+
+
+                        elif usr_ans == False:
+
+                            msg = messagebox.showinfo("Fim do pomodóro",
+
+                                                      "\nVocê completou " + str(total_pomodoros) + " pomodóro(s) hoje!")
+
+                            break
+
+                    print("sleeping")
+
+                    time.sleep(1)
+
+                    t_now = dt.datetime.now()
+
+                    timenow = t_now.strftime("%H:%M")
 ```
- <p>No código fornecido, o reconhecimento de voz é realizado utilizando a biblioteca `speech_recognition`. A assistente virtual BETA inicia dizendo uma mensagem de boas-vindas através da síntese de voz com `pyttsx3`. Em seguida, entra em um loop infinito para escutar continuamente os comandos do usuário.</p>
-  <p>Dentro do loop, o código captura o áudio do microfone e o transforma em texto utilizando o reconhecimento de voz do Google. Se o texto reconhecido for "beta", a função `executa_comando()` é chamada.</p>
-  <p>A função `executa_comando()` também captura áudio do microfone e transforma em texto, porém, desta vez, após a detecção do "chamado" inicial. Se o comando contiver a palavra "beta", a assistente repete o comando reconhecido em voz alta.</p>
+ 
+ <p>No código fornecido, é realizado o reconhecido a chamada da funcionalidade e realiza o inicio da contagem de tempo, após esse tempo ele mostra uma tela avisando o fim do tempo por uma janela do tkinter, quando ocorre a confirmação começa a contagem do intervalo, e apresenta novamente o aviso de seu fim e inicia novamente o ciclo.</p>
   <br>
 </details>
 <details>
@@ -128,9 +210,6 @@ Python: Linguagem de programação principal utilizada para desenvolver a lógic
 
 Tkinter: Biblioteca gráfica do Python utilizada para criar a interface gráfica da aplicação.
 
-SpeechRecognition: Biblioteca do Python para reconhecimento de voz, utilizada para interpretar comandos de voz do usuário.
-
-Pyttsx3: Biblioteca do Python para síntese de voz, utilizada para que a assistente virtual possa falar com o usuário.
 
 
 ## Meus Projetos
