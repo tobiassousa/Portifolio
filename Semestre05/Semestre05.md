@@ -27,7 +27,7 @@ Com isso sugerimos a criação de um sistema aonde possuí o acesso a todos esse
 <details>
  <summary><b>Modelagem do Banco</b></summary>
   <br>
-<p align="center"><img src="./image.png" widht="20%"></img>
+<p align="center"><img src=".modelo_logico_tecsus_energia.png" widht="20%"></img>
   <p>A modelagem foi utilizada por todo projeto para montar a estrutura do sistema</p>
   
 
