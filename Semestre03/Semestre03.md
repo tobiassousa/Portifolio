@@ -26,43 +26,35 @@ Diante dessa complexidade, nossa proposta visa criar uma plataforma que harmoniz
 <h3 align="center"> Vendedor </h3>
 <p align="center"><img src="https://github.com/Thunder53/Dom-Rock/blob/main/doc/Backlog/jornada-usuario-2.png" widht="20%"></img>
 
-## Modelagem
-
-<h3 align="center">Modelagem Lógico</h3>
-<p align="center"><img src="https://github.com/Thunder53/Dom-Rock/blob/main/doc/Diagramas/Modelo_Logico.png" widht="20%"></img>
 
 ## Contribuições Individuais
 <details>
-  <summary><b>Dados: Compreensão e organização dos dados</b></summary>
+  <summary><b>Modelagem</b></summary>
   <br>
-  <p>Desenvolvi a função de entender modelar e organizar os dados passados para nós, foi necessarios utilizar planilhas pois o arquivo passado estava em csv. Após a organização foi realizada a modelagem e assim criado as tabelas necessarias
+  <p align="center"><img src="https://github.com/Thunder53/Dom-Rock/blob/main/doc/Diagramas/Modelo_Logico.png" widht="20%"></img>
+  <p>Realizei a analise das tabelas e o melhor modo para realizar as contruções e ligações delas. Definindo a PK e as ligações e relacionamentos.
   </p>
   
  
-  ![Diagrama de Relacionamento](https://github.com/Thunder53/Dom-Rock/blob/main/doc/Diagramas/Diagrama_Entidade_Relacionamento.png)
 
 </details>
 <details>
-  <summary><b>Front-end: Criação da Tabela</b></summary>
+  <summary><b>Front-end: Criação de Gráfico</b></summary>
   <br>
-  <p>Dsenvolvi a criação da tabela e suas funções de busca para facilitar a visualização das informações e edições futuras.</p>
+  <p>Dsenvolvi a criação de gráficos com base nos dados inseridos, também realizei a separação pela coloração. Foi necessario realizar algumas mudanças no gráfico pela quantidade de dados que acabou travando a tela, foi necessario realizar um zoom no gráfico para não ficar tão grande.</p>
 
+  <p align="center"><img src="https://github.com/Thunder53/Dom-Rock/assets/100934496/1c643b9f-e5eb-48b3-ba16-be437a76696b" widht="20%"></p>
 
-![Tabela](https://private-user-images.githubusercontent.com/100934496/243236070-385424ea-54ef-4c05-9355-36a59d7c63cc.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTY5MTg4ODcsIm5iZiI6MTcxNjkxODU4NywicGF0aCI6Ii8xMDA5MzQ0OTYvMjQzMjM2MDcwLTM4NTQyNGVhLTU0ZWYtNGMwNS05MzU1LTM2YTU5ZDdjNjNjYy5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNTI4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDUyOFQxNzQ5NDdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT03Njg1ZmJhNTMzMjUyNDI5Y2UxZjNhNzVkYzgxMDEyMjIzMTU5ODBkYTFhZmMzZjcwMzE1N2RkNTM1ZDkzMTNjJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.oblluWs8F4U1lWN6OVdEJ_ywcn7LH1THiqUosRxjw68)
-
- 
   <br>
 </details>
 
 ## Tecnologias Utilizadas
 
-JavaScript: linguagem de programação para o desenvolvimento front-end.
+JavaScript: Linguagem de programação para o desenvolvimento front-end.
 
-Java: linguagem de programação para o desenvolvimento back-end.
+PostgreSQL: Utilizado para armazenar e gerenciar dados na aplicação.
 
-PostgreeSQL: utilizado para armazenar e gerenciar dados na aplicação.
-
-Figma: utilizado para o desenvolvimento e prototipação das wireframes.
+BrModel: Utilizado para criação dos modelos da estrutura do banco.
 
 ## Lições Aprendidas
 
@@ -72,9 +64,9 @@ Figma: utilizado para o desenvolvimento e prototipação das wireframes.
 <details>
   <summary><b>Clique para ver a lista de hard skills</b></summary>
   
-  <p1>Desenvolvimento Front-end e Back-end: Adquiri habilidades de programação em JavaScript e Java, permitindo-me criar interfaces interativas (front-end) e desenvolver a lógica empresarial (back-end) para sistemas complexos.</p1>
+  <p1>Desenvolvimento Front-end e Back-end: Adquiri conhecimento em programação em Java, foi necessario realizar requisições de dados para criação do gráfico. Também adquiri conhecimento em Javascript o qual foi necessario para a criação do gráfico.</p1>
   
-  <p1>Banco de Dados: Aprendi design de bancos de dados, SQL e gestão de dados ao utilizar o PostgreSQL para armazenamento e manipulação de informações.</p1>
+  <p1>Banco de Dados: Aprendi a realizar a criação do modelo logico e de relacionamento, e após isso foi necessario realizar o script de criação da tabela.</p1>
   
 </details>
 
@@ -82,11 +74,9 @@ Figma: utilizado para o desenvolvimento e prototipação das wireframes.
 <details>
   <summary><b>Clique para ver a lista de soft skills</b></summary>
   
-  <p1>Proatividade: Enfrentar desafios como a padronização de dados demonstrou minha capacidade de propor e implementar soluções, evidenciando uma abordagem proativa para otimizar processos.</p1>
+  <p1>Proatividade: Foi necessario aperfeicoar minha proatividade para poder entregar as tarefa no prazo pela grande demanda e realizar auxilio para os colegas.</p1>
   
-  <p1>Comunicação Assertiva: Ao explicar claramente problemas, soluções e jornadas do usuário, desenvolvi habilidades de comunicação eficaz, tornando informações técnicas acessíveis a diversos públicos.</p1>
-  
-  <p1>Trabalho em Equipe: A colaboração em projetos acadêmicos evidenciou minha habilidade de trabalhar em equipe, essencial em ambientes profissionais de desenvolvimento de software</p1>
+  <p1>Comunicação e Organização: Aprendi que é necessario realizar uma comunicação clara e objetiva com o time pois assim conseguimos identificar tarefas que possam ser entregues tardes ou até mesmo quem consegue nos auxiliar para finalizar uma task.</p1>
   
 </details>
 
