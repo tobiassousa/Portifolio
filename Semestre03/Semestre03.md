@@ -43,7 +43,7 @@ Diante dessa complexidade, nossa proposta visa criar uma plataforma que harmoniz
   <br>
   <p>Dsenvolvi a criação de gráficos com base nos dados inseridos, também realizei a separação pela coloração. Foi necessario realizar algumas mudanças no gráfico pela quantidade de dados que acabou travando a tela, foi necessario realizar um zoom no gráfico para não ficar tão grande.</p>
 
-  <p align="center"><img src="https://github.com/Thunder53/Dom-Rock/assets/100934496/1c643b9f-e5eb-48b3-ba16-be437a76696b" widht="20%"></p>
+  <p align="center"><img src="https://github.com/Thunder53/Dom-Rock/assets/100934496/ebcc87b9-1ce1-4a02-a7b8-fb2f26c363af" widht="20%"></p>
 
   <br>
 </details>
