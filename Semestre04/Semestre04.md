@@ -7,73 +7,103 @@ Parceiro Acadêmico: Jaia
 
 Jaia Software Em um cenário onde a paisagem urbana se compõe de uma mistura de edifícios modernos e históricos, a empresa Jaia, apresentou um desafio significativo. A condução de inspeções prediais estava provando ser uma tarefa morosa e suscetível a imprecisões. Diante desse cenário, a Jaia buscou soluções inovadoras para otimizar esse processo crucial. A visão estratégica da empresa contemplou o desenvolvimento de um software de inspeção predial, projetado para revolucionar a abordagem atual. A plataforma concebida promete oferecer uma experiência intuitiva, capacitando os inspetores a documentar minuciosamente detalhes relevantes e capturar evidências visuais de forma eficaz. Adicionalmente, a geração instantânea de relatórios abastecerá a tomada de decisões embasadas. A Jaia, reconhecendo a necessidade de aprimorar a qualidade e eficiência das inspeções, direcionou seus esforços para o desenvolvimento desse software inovador. O resultado obtido transcendeu as expectativas iniciais, beneficiando não somente a empresa, mas também elevando o padrão das inspeções prediais na esfera urbana, contribuindo, assim, para uma maior segurança e excelência nas estruturas urbanas.
 
-## Modelagem do Banco
 
-### <p align="center">DER</p>
-<p align="center"><img src="./model-der.png" widht="20%"></img>
 
-### <p align="center">Mer</p>
-<p align="center"><img src="./model-mer.png" widht="20%"></img>
 
 ## Contribuições Individuais
 <details>
 <summary><b>Modelagem: Realização da modelagem de dados</b></summary>
 <br>
-<p>Realizei a modelagem e a criação das tabelas, com base na necessidade do cliente e depois auxiliei para fazer a integração do banco ao back-end.</p>
-  
-![Modelo Lógico](https://private-user-images.githubusercontent.com/102003274/268406261-27c594f5-52a0-47a3-aa94-616ca7269a95.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTY5MjA3NjAsIm5iZiI6MTcxNjkyMDQ2MCwicGF0aCI6Ii8xMDIwMDMyNzQvMjY4NDA2MjYxLTI3YzU5NGY1LTUyYTAtNDdhMy1hYTk0LTYxNmNhNzI2OWE5NS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNTI4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDUyOFQxODIxMDBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1hZmI1ZTQ0OWU2NmE0MTM0NmI3M2I5YmNiZTg4YjljNWUxYTVjODdjZDE5MTRiYmI5NzNjNDdlYTQxY2Y1N2RmJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.jEbuQ0xF1aHk_KmFxAuIdqNnBMlAZqVcYTmXPKSfQjs)
+<p>Realizei a modelagem e a criação das tabelas, foi necessario realizar a criação das tabelas com a necessidade do cliente pois não possuíamos uma base pronta.
+Com isso foi necessario entender o produto e já realizar uma analise de quais tabelas seriam necessarias.</p>
 
+### <p align="center">DER</p>
+<p align="center"><img src="./model-der.png" widht="30%"></img>
+
+### <p align="center">Mer</p>
+<p align="center"><img src="./model-mer.png" widht="20%"></img>
 </details>
 
 <details>
 <summary><b>AuthController: Controle de Autenticação</b></summary>
 <br>
-<p>O código acima implementa o controlador de autenticação (AuthController), responsável por lidar com as solicitações de autenticação dos usuários. Aqui está uma explicação detalhada do que acontece no código:</p>
+<p>Realizei a criação do envio de emails para o cliente, foi necessario realizar a criação do corpo do email e também da logica para realizar o envio do email quando a ordem do serviço for registrada.</p>
 
 ```java
+package com.dataTeam.jaia.jaia.service.Email;
+
+import java.security.SecureRandom;
+import java.time.LocalDateTime;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.mail.javamail.MimeMessageHelper;
+import org.springframework.stereotype.Service;
 
-import com.dataTeam.jaia.jaia.model.AuthRequest;
-import com.dataTeam.jaia.jaia.service.AuthService;
+import com.dataTeam.jaia.jaia.model.Checklist;
+import com.dataTeam.jaia.jaia.model.Cliente;
+import com.dataTeam.jaia.jaia.model.Funcionario;
+import com.dataTeam.jaia.jaia.model.OrdemServico;
+import com.dataTeam.jaia.jaia.model.Requisicao;
+import com.dataTeam.jaia.jaia.repository.ClienteRepository;
 
-@RestController
-@CrossOrigin
-@RequestMapping("/api/auth")
-public class AuthController {
+import jakarta.mail.MessagingException;
+ private String generateRandomPassword(int length) {
 
-    private final AuthService authService;
-
-    @Autowired
-    public AuthController(AuthService authService) {
-        this.authService = authService;
+    return password.toString();
     }
 
-    @PostMapping("/login")
-    public ResponseEntity<String> login(@RequestBody AuthRequest authRequest) {
-        String username = authRequest.getUsername();
-        String password = authRequest.getPassword();
-        String tipoDocumento = authRequest.getTipoDocumento();
 
-        if ("cnpj".equals(tipoDocumento)) {
-            String result = authService.authenticateCliente(username, password);
-            return ResponseEntity.ok(result);
-        } else if ("cpf".equals(tipoDocumento)) {
-            String result = authService.authenticateFuncionario(username, password);
-            return ResponseEntity.ok(result);
-        }
 
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Tipo de documento inválido");
+    public void enviarOrdemServico(OrdemServico ordemServico, Requisicao requisicao, Cliente cliente, Funcionario funcionario, Checklist checklist, String assunto) throws MessagingException {
+
+
+        MimeMessage mail = mailSender.createMimeMessage();
+
+        MimeMessageHelper mensagem = new MimeMessageHelper(mail, true);
+        mensagem.setSubject(assunto);
+        mensagem.setTo(cliente.getEmail());
+        mensagem.setFrom(supportMail);
+
+        String conteudoDoEmail = getContentMailCertificate(ordemServico , requisicao, cliente, funcionario, checklist );
+
+        mensagem.setText(conteudoDoEmail, true);
+
+        mailSender.send(mail);
+
+
     }
+
+    public String getContentMailCertificate(OrdemServico ordemServico, Requisicao requisicao, Cliente cliente, Funcionario funcionario, Checklist checklist) {
+    String nomecli = cliente.getNome();    
+    String nomeOrdem = ordemServico.getNome_ordem();
+    String statusOrdem = ordemServico.getStatus_ordem();
+    LocalDateTime dataAbertura = requisicao.getData_abertura();
+    String descricao = requisicao.getDescricao();
+    String cnpj = cliente.getCnpj();
+    String inspecao = ordemServico.getTipo_inspecao();
+    Funcionario responsasvel = funcionario.getSupervisor();
+    String checklistname = checklist.getNome();
+
+        // Customize the email content based on the data from OrdemServico
+        String content = "<p>Olá, " + nomecli + "! Bem-vindo(a) ao Predial!</p>" +
+                    "<p>&nbsp;</p>" +
+                    "<p>Sua Ordem de Seriço está disponível abaixo:<br /></p>" +
+                    "<p>Nome: " + nomeOrdem + "Status da Requisição:" +"</p>" +
+                    "<p>Data da Abertura: " + dataAbertura + "Descrição:" + descricao + "</p>" +
+                    "<p>CNPJ:" + cnpj + "Status da Ordem de Seriço:" + statusOrdem + "</p>"+
+                    "<p>Inspeção:" + inspecao + "Responsável" + responsasvel +  "</p>" +
+                    "<p>Data da Prestação do Serviço:"  + "Checklist:" + checklistname + "</p>"+
+                    "<p>*Não responda este E-mail*</p>";
+
+        return content;
+
+    } 
+
 }
 ```
-<p>O AuthController recebe solicitações POST na rota `/api/auth/login`, onde um objeto `AuthRequest` contendo o nome de usuário, senha e tipo de documento é enviado no corpo da solicitação. Dependendo do tipo de documento (cnpj ou cpf), o método `login()` chama o serviço de autenticação apropriado (`authenticateCliente` ou `authenticateFuncionario`). Se o tipo de documento não for válido, uma resposta de status 400 é retornada.</p>
+<p>O código realiza a verificação da etapa da ordem e após a ordem chamar a função de 'enviarOrdemServico' ele irá pegar as informações do cliente e irá montar o email para realizar o envio.</p>
 </details>
 
 
@@ -84,23 +114,24 @@ Vue.js: Framework JavaScript utilizado para construir a interface interativa da 
 
 Oracle SQL: Sistema de gerenciamento de banco de dados relacional utilizado para armazenar informações sobre usuários e autenticação.
 
-Figma: utilizado para o desenvolvimento e prototipação das wireframes.
-
 ## Lições Aprendidas
 
 <p align="justify"></p>
 
 <h3>Hard Skills</h3>
 <details>
-  <p1>Desenvolvimento Web: Aprofundei meu conhecimento em HTML, CSS e JavaScript, implementando uma landing page responsiva e intuitiva para promover o serviço de inspeção predial.</p1>
-  <p1>Oracle Sql: Aprendi a fazer as conexões oracle com um datacenter</p1>
-  <p1>Spring Boot: Utilizei o Spring Boot para implementar a lógica de autenticação do sistema, facilitando o desenvolvimento e garantindo a segurança das informações dos usuários.</p1>
+  <p1>Oracle Sql: Foi necessario buscar o conhesimento sobre o Oracle SQL o qual foi disponibilizado uma chave para nós do PL/SQL com isso aprendi a realizar a conexão do banco de dados na nuvem com o nosso códgio.</p1>
+
+
+  <p1>Java: Utilizei o Java para criar as funções e requisiçõs da tela de envio de email, e foi necessario compreender como os emails aceitavam o acesso de um codigo externo a eles.</p1>
 </details>
+
+<h3>Soft Skills</h3>
 <details>
-  <h3>Soft Skills</h3>
-  <p1>Trabalho em Equipe: Colaborei com membros da equipe para definir requisitos, prioridades e prazos, demonstrando habilidades de comunicação e cooperação.</p1>
-  <p1>Resolução de Problemas: Enfrentei desafios técnicos durante o desenvolvimento do sistema, buscando soluções eficientes e adaptáveis para garantir a qualidade do produto final.</p1>
-  <p1>Gerenciamento de Tempo: Aprendi a gerenciar meu tempo de forma eficaz, equilibrando as demandas do projeto com outras responsabilidades e compromissos pessoais.</p1>
+  <p1>Trabalho em Equipe: Foi necessario trabalhar com os colegas para compreender o sistema e entender o produto. Com isso tive auxilio para montar a modelagem.</p1>
+
+
+  <p1>Organização: Aprendi a realizar a organização de tarefas pessoais e tarefas corporativas para conseguir entregar todas as tarefas a tempo.</p1>
 </details>
 
 ## Meus Projetos

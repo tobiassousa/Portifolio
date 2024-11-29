@@ -73,4 +73,4 @@ Com isso sugerimos a criação de um sistema aonde possuí o acesso a todos esse
 - [Semestre 1](../Semestre01/Semestre02.md)
 - [Semestre 3](../Semestre03/Semestre03.md)
 - [Semestre 4](../Semestre04/Semestre04.md)
-- [Semestre 6](../Semestre05/Semestre06.md)
+- [Semestre 6](../Semestre06/Semestre06.md)
