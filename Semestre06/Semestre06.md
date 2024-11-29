@@ -104,9 +104,9 @@ iframe {
 <h3>Soft Skills</h3>
 <details>
   <summary><b>Clique para ver a lista de soft skills</b></summary>
-<p1></p1>
+<p1>Comunicação: Desenvolvi a habilidade de comunicação pois foi necessario debatermos como time para compreender e entender o produto e o modo que iriamos desenolver o dashboard e o machine learning</p1>
 
-<p1><p1>
+<p1>Trabalho em equipe: Me aperfeiçoei no trablho com minha equipe pois foi necessario realizar varias atividades em conjunto e compreendendo oque meus colegas necessitavam de auxilio.<p1>
 
 </details>
 
