@@ -11,6 +11,9 @@ A SPC Grafeno nasceu em setembro de 2019 com uma missão clara: trazer mais dina
 
 Nós propusemos realizar novas ideias e analises de produto e informações dos clientes. Utilizamos tecnicas de analise de machine learning para prever tendências, identificar riscos ou até propor métodos para qualificar ativos. Será realizando também uma analise de dashboard para analise dos clientes.
 
+## Projeto:
+https://github.com/Data-Team23/SPC-Grafeno
+
 
 ## Contribuições Individuais
 <details>
@@ -114,8 +117,9 @@ iframe {
 ## Meus Projetos
 ## Semestres
 
-- [Semestre 1](../Semestre01/Semestre01.md)
-- [Semestre 1](../Semestre01/Semestre02.md)
-- [Semestre 3](../Semestre03/Semestre03.md)
-- [Semestre 4](../Semestre04/Semestre04.md)
-- [Semestre 5](../Semestre05/Semestre05.md)
+- [Semestre 1 - BETA](./Semestre01/Semestre01.md)
+- [Semestre 2 - Pro4Tech](./Semestre02/Semestre02.md)
+- [Semestre 3 - Dom Rock](./Semestre03/Semestre03.md)
+- [Semestre 4 - Jaia](./Semestre04/Semestre04.md)
+- [Semestre 5 - Tecsus](./Semestre06/Semestre05.md)
+

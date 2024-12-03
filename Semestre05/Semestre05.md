@@ -17,6 +17,9 @@ A Tecsus realiza a coleta e processamento de contas de energia, água e gás par
 ### Solução para o problema
 Com isso sugerimos a criação de um sistema aonde possuí o acesso a todos esses dados facilmente e é possível inserir esses dados, juntamente com a criação de Dashboards pelos dados inseridos.
 
+## Projeto:
+https://github.com/Data-Team23/Tecsus
+
 
 ## Modelagem do Banco
 
@@ -34,6 +37,67 @@ Com isso sugerimos a criação de um sistema aonde possuí o acesso a todos esse
 <p>Foi necessario realizar a criação da modelagem seguindo o modelo estrela. Visto a proporção das planilhas e dados foi realizado um estudo encima dos dados para realizar o melhor relacionamento</p>
 </details>
 
+<details>
+ <summary><b>Deploy</b></summary>
+  <br>
+<p>Foi realizado a estrutura do deploy antes da criação do código.</p>
+<p align="center"><img src="./Deploy.png" widht="20%"></img>
+<p align="center"><img src="./Deploy2.png" widht="20%"></img>
+
+```java
+name: Deploy Tecsus
+
+on:
+  pull_request:
+    branches:
+      - main
+    types:
+      - closed
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v2
+        with:
+            username: ${{ secrets.DOCKER_USERNAME }}
+            password: ${{ secrets.DOCKER_PASSWORD }}
+      
+      - name: Build Docker Image
+        run: docker build -t datateam23/tecsus-backend .
+        working-directory: tecsus
+
+      - name: Push Docker Image
+        run: docker push datateam23/tecsus-backend
+        working-directory: tecsus
+       
+       
+  deploy:
+          needs: build
+          runs-on: self-hosted
+          steps:
+              - name: Pull image from docker hub
+                run: sudo docker pull datateam23/tecsus-backend:latest
+              - name: Remove docker container
+                run: sudo docker rm -f tecsus-backend
+              - name: Run docker container
+                run: sudo docker run -d -p 8000:8000 -e DATABASE_USERNAME=${{secrets.DATABASE_USER}} -e DATABASE_PASSWORD='${{secrets.DATABASE_PASSWORD}}' -e DATABASE_URL=${{secrets.DATABASE_URL}} --name tecsus-backend  datateam23/tecsus-backend
+```
+
+<p>Foi realizado o código do deploy pensando na segurança, na agilidade de atualização e automoção.
+O código coleta todas as alterações inseridas na main, realiza a criação da imagem docker e insere a imagem, após isso realiza as inserções dentro da VM inserida na AWS com a nova atualização do código. Para mantermos em segurança as chaves de acesso e usuario estão criptografados pelo git e assim utilizamos apenas um parametro para chamar essas chaves de acesso.</p>
+</details>
+
 
 ## Tecnologias Utilizadas
 
@@ -43,6 +107,7 @@ Com isso sugerimos a criação de um sistema aonde possuí o acesso a todos esse
 - HTML
 - CSS
 - Oracle SQL
+- AWS
 
 ## Lições Aprendidas
 
@@ -69,8 +134,9 @@ Com isso sugerimos a criação de um sistema aonde possuí o acesso a todos esse
 ## Meus Projetos
 ## Semestres
 
-- [Semestre 1](../Semestre01/Semestre01.md)
-- [Semestre 1](../Semestre01/Semestre02.md)
-- [Semestre 3](../Semestre03/Semestre03.md)
-- [Semestre 4](../Semestre04/Semestre04.md)
-- [Semestre 6](../Semestre06/Semestre06.md)
+- [Semestre 1 - BETA](./Semestre01/Semestre01.md)
+- [Semestre 2 - Pro4Tech](./Semestre02/Semestre02.md)
+- [Semestre 3 - Dom Rock](./Semestre03/Semestre03.md)
+- [Semestre 4 - Jaia](./Semestre04/Semestre04.md)
+- [Semestre 6 - SPC Grafeno](./Semestre05/Semestre06.md)
+

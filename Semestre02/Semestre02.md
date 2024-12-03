@@ -9,12 +9,17 @@ Parceiro Acadêmico: Pro4Tech
 A Pro4tech é uma empresa que visa a transformação digital como um de seus pilares. Seu produto está voltado para criação de soluções digitais, ágeis e inovadoras por meio do desenvolvimento de pessoas. A empresa possui seu portifólio de serviços voltados para soluções em Aplicações Transacionais (Web/App), Aplicações Analíticas (BI/Analytics), Redesenho de Processos de Negócio, Inteligência Artificial (IA), Robotização de Processos (RPA) e Internet das Coisas (IoT).
 
 
+
+
 ## 💻 Nossa proposta
 
 A Pro4tech está abrindo varias vagas para contratação de novos funcionários, com isso sentiu a necessidade de ter um software onde pudesse registrar e ter todo o controle das vagas que estão ofertando no mercado.
 
 ### Solução para o problema
 A solução apresentada por nós e a criação de um sistema desktop que possuia a finalidade de receber cadastrados nas vagas, disponibilizar vagas, excluir e editar as vagas também geração de relatórios.
+
+## Projeto:
+https://github.com/Thunder53/Pro4Tech.git
 
 ## Modelagem do Banco
 
@@ -246,8 +251,8 @@ MySQL: Sistema de gerenciamento de banco de dados relacional utilizado para arma
 ## Meus Projetos
 ## Semestres
 
-- [Semestre 1](../Semestre01/Semestre01.md)
-- [Semestre 3](../Semestre03/Semestre03.md)
-- [Semestre 4](../Semestre04/Semestre04.md)
-- [Semestre 5](../Semestre06/Semestre05.md)
-- [Semestre 6](../Semestre05/Semestre06.md)
+- [Semestre 1 - BETA](./Semestre01/Semestre01.md)
+- [Semestre 3 - Dom Rock](./Semestre03/Semestre03.md)
+- [Semestre 4 - Jaia](./Semestre04/Semestre04.md)
+- [Semestre 5 - Tecsus](./Semestre06/Semestre05.md)
+- [Semestre 6 - SPC Grafeno](./Semestre05/Semestre06.md)

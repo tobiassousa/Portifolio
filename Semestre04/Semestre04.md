@@ -8,6 +8,9 @@ Parceiro Acadêmico: Jaia
 Jaia Software Em um cenário onde a paisagem urbana se compõe de uma mistura de edifícios modernos e históricos, a empresa Jaia, apresentou um desafio significativo. A condução de inspeções prediais estava provando ser uma tarefa morosa e suscetível a imprecisões. Diante desse cenário, a Jaia buscou soluções inovadoras para otimizar esse processo crucial. A visão estratégica da empresa contemplou o desenvolvimento de um software de inspeção predial, projetado para revolucionar a abordagem atual. A plataforma concebida promete oferecer uma experiência intuitiva, capacitando os inspetores a documentar minuciosamente detalhes relevantes e capturar evidências visuais de forma eficaz. Adicionalmente, a geração instantânea de relatórios abastecerá a tomada de decisões embasadas. A Jaia, reconhecendo a necessidade de aprimorar a qualidade e eficiência das inspeções, direcionou seus esforços para o desenvolvimento desse software inovador. O resultado obtido transcendeu as expectativas iniciais, beneficiando não somente a empresa, mas também elevando o padrão das inspeções prediais na esfera urbana, contribuindo, assim, para uma maior segurança e excelência nas estruturas urbanas.
 
 
+## Projeto:
+https://github.com/Data-Team23/Jaia
+
 
 
 ## Contribuições Individuais
@@ -137,8 +140,8 @@ Oracle SQL: Sistema de gerenciamento de banco de dados relacional utilizado para
 ## Meus Projetos
 ## Semestres
 
-- [Semestre 1](../Semestre01/Semestre01.md)
-- [Semestre 2](../Semestre02/Semestre02.md)
-- [Semestre 3](../Semestre03/Semestre03.md)
-- [Semestre 5](../Semestre06/Semestre05.md)
-- [Semestre 6](../Semestre05/Semestre06.md)
+- [Semestre 1 - BETA](./Semestre01/Semestre01.md)
+- [Semestre 2 - Pro4Tech](./Semestre02/Semestre02.md)
+- [Semestre 3 - Dom Rock](./Semestre03/Semestre03.md)
+- [Semestre 5 - Tecsus](./Semestre06/Semestre05.md)
+- [Semestre 6 - SPC Grafeno](./Semestre05/Semestre06.md)

@@ -8,31 +8,17 @@ Parceiro: Professor Fatec - Fabiano Sabha
 </div>
 
 ## 💻 Nossa proposta
-A BETA é uma assistente criada por nós com intenção de oferecer suporte a alunos.
+A BETA é uma assistente criada por nós com intenção de oferecer suporte a alunos, em seu tempo de estudo, foco e algumas atividades para auxiliar melhor a compreensão do ensinamento.
 Possuindo varias funcionalidade como:
- Pesquisa, Pomodoro, Calendário, Toque, Gravador de voz, Livro, Clima, Calculadora ou lembrete
+ Pesquisa, Pomodoro, Calendário, Toque, Gravador de voz, Livro, Clima, Calculadora ou lembrete.
 
 Para ativar suas funcionalidades é necessario apenas falar a nomenclatura da função. 
 
-## Lições Aprendidas
+## Projeto:
+https://github.com/tobiassousa/Beta
 
-<p align="justify"></p>
-<h3>Hard Skills</h3>
-<details>
-  <summary><b>Clique para ver a lista de hard skills</b></summary>
-<p1>Desenvolvimento de Software: Fortaleci minhas habilidades em Python criando a função de pomodoro da qual necessitei aprender a realizar a logica de programação, e também a verificar a aprendizagem da maquina a reconhecer a chamativa para a funcionalidade.</p1>
 
-<p1>Desenvolvimento de Interface: Utilizei Tkinter para criar interfaces gráficas intuitivas, das quais realizam avisos na tela quando começa e acaba o tempo do pomodo.</p1>
 
-</details>
-<h3>Soft Skills</h3>
-<details>
-  <summary><b>Clique para ver a lista de soft skills</b></summary>
-<p1>Trabalho em Equipe: A colaboração com o time é fundamental para conseguir realizar uma entrega completa. Sendo assim foi utilizado o whatsapp para trocas de mensagens diarias e realizado encontros durantes as aulas.</p1>
-
-<p1>Gestão do Tempo: Realizei o planejamento dos dias de até a entrega e o tempo gasto da atividade para entregar a tempo.</p1>
-
-</details>
 
 ## Contribuições Individuais
 <details>
@@ -204,6 +190,9 @@ os.startfile("output.wav")           # Abre gravação.
   <br>
 </details>
 
+
+
+
 ## Tecnologias Utilizadas
 
 Python: Linguagem de programação principal utilizada para desenvolver a lógica da assistente virtual e suas funcionalidades.
@@ -212,11 +201,35 @@ Tkinter: Biblioteca gráfica do Python utilizada para criar a interface gráfica
 
 
 
+
+
+
+## Lições Aprendidas
+
+<p align="justify"></p>
+<h3>Hard Skills</h3>
+<details>
+  <summary><b>Clique para ver a lista de hard skills</b></summary>
+<p1>Desenvolvimento de Software: Fortaleci minhas habilidades em Python criando a função de pomodoro da qual necessitei aprender a realizar a logica de programação, e também a verificar a aprendizagem da maquina a reconhecer a chamativa para a funcionalidade.</p1>
+
+<p1>Desenvolvimento de Interface: Utilizei Tkinter para criar interfaces gráficas intuitivas, das quais realizam avisos na tela quando começa e acaba o tempo do pomodoro.</p1>
+
+</details>
+<h3>Soft Skills</h3>
+<details>
+  <summary><b>Clique para ver a lista de soft skills</b></summary>
+<p1>Trabalho em Equipe: A colaboração com o time é fundamental para conseguir realizar uma entrega completa. Sendo assim foi utilizado o whatsapp para trocas de mensagens diarias e realizado encontros durantes as aulas.</p1>
+
+<p1>Gestão do Tempo: Realizei o planejamento dos dias de até a entrega e o tempo gasto da atividade para entregar a tempo.</p1>
+
+</details>
+
+
 ## Meus Projetos
 ## Semestres
 
-- [Semestre 2](../Semestre02/Semestre02.md)
-- [Semestre 3](../Semestre03/Semestre03.md)
-- [Semestre 4](../Semestre04/Semestre04.md)
-- [Semestre 5](../Semestre06/Semestre05.md)
-- [Semestre 6](../Semestre05/Semestre06.md)
+- [Semestre 2 - Pro4Tech](./Semestre02/Semestre02.md)
+- [Semestre 3 - Dom Rock](./Semestre03/Semestre03.md)
+- [Semestre 4 - Jaia](./Semestre04/Semestre04.md)
+- [Semestre 5 - Tecsus](./Semestre06/Semestre05.md)
+- [Semestre 6 - SPC Grafeno](./Semestre05/Semestre06.md)

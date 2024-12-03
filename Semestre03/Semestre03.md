@@ -17,6 +17,9 @@ Neste semestre, o nosso grupo está propondo uma solução abrangente para a emp
 
 Diante dessa complexidade, nossa proposta visa criar uma plataforma que harmonize e simplifique esses processos, proporcionando à Dom Rock uma gestão mais eficiente e informada de suas operações comerciais.
 
+## Projeto:
+https://github.com/Thunder53/Dom-Rock
+
 
 ## Jornada do usuário 
 
@@ -83,8 +86,9 @@ BrModel: Utilizado para criação dos modelos da estrutura do banco.
 ## Meus Projetos
 ## Semestres
 
-- [Semestre 1](../Semestre01/Semestre01.md)
-- [Semestre 2](../Semestre02/Semestre02.md)
-- [Semestre 4](../Semestre04/Semestre04.md)
-- [Semestre 5](../Semestre06/Semestre05.md)
-- [Semestre 6](../Semestre05/Semestre06.md)
+- [Semestre 1 - BETA](./Semestre01/Semestre01.md)
+- [Semestre 2 - Pro4Tech](./Semestre02/Semestre02.md)
+- [Semestre 4 - Jaia](./Semestre04/Semestre04.md)
+- [Semestre 5 - Tecsus](./Semestre06/Semestre05.md)
+- [Semestre 6 - SPC Grafeno](./Semestre05/Semestre06.md)
+
