@@ -138,5 +138,5 @@ O código coleta todas as alterações inseridas na main, realiza a criação da
 - [Semestre 2 - Pro4Tech](./Semestre02/Semestre02.md)
 - [Semestre 3 - Dom Rock](./Semestre03/Semestre03.md)
 - [Semestre 4 - Jaia](./Semestre04/Semestre04.md)
-- [Semestre 6 - SPC Grafeno](./Semestre05/Semestre06.md)
+- [Semestre 6 - SPC Grafeno](./Semestre06/Semestre06.md)
 
