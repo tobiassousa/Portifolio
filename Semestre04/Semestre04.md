@@ -140,8 +140,8 @@ Oracle SQL: Sistema de gerenciamento de banco de dados relacional utilizado para
 ## Meus Projetos
 ## Semestres
 
-- [Semestre 1 - BETA](./Semestre01/Semestre01.md)
-- [Semestre 2 - Pro4Tech](./Semestre02/Semestre02.md)
-- [Semestre 3 - Dom Rock](./Semestre03/Semestre03.md)
-- [Semestre 5 - Tecsus](./Semestre05/Semestre05.md)
-- [Semestre 6 - SPC Grafeno](./Semestre06/Semestre06.md)
+- [Semestre 1 - BETA](../Semestre01/Semestre01.md)
+- [Semestre 2 - Pro4Tech](../Semestre02/Semestre02.md)
+- [Semestre 3 - Dom Rock](../Semestre03/Semestre03.md)
+- [Semestre 5 - Tecsus](../Semestre05/Semestre05.md)
+- [Semestre 6 - SPC Grafeno](../Semestre06/Semestre06.md)
