@@ -231,5 +231,5 @@ Tkinter: Biblioteca gráfica do Python utilizada para criar a interface gráfica
 - [Semestre 2 - Pro4Tech](./Semestre02/Semestre02.md)
 - [Semestre 3 - Dom Rock](./Semestre03/Semestre03.md)
 - [Semestre 4 - Jaia](./Semestre04/Semestre04.md)
-- [Semestre 5 - Tecsus](./Semestre06/Semestre05.md)
-- [Semestre 6 - SPC Grafeno](./Semestre05/Semestre06.md)
+- [Semestre 5 - Tecsus](./Semestre05/Semestre05.md)
+- [Semestre 6 - SPC Grafeno](./Semestre06/Semestre06.md)
